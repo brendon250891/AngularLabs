@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between { 
+    justify-content: space-between;
+}
+
+.h-8 {
+    width: 2rem;
+    font-size: 2rem;
+}
+
+.w-24 {
+    width: 6rem;
+    font-size: 6rem;
+}
+
+.w-1\/2 {
+    width: 50%;
+}
+
+.w-2\/3 {
+    width: 67.66667%;
+}
+
+.h-8 {
+    width: 2rem;
+    font-size: 2rem;
+}
+
+.h-24 {
+    height: 6rem;
+    font-size: 6rem;
+}
+
+.rounded-full {
+    border-radius: 1em;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.pt-12 {
+    padding-top: 3rem;
+}
+
+.px-4 {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.px-2 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.text-gray-800 {
+    color: #4A5568;
+}
+
+.bg-gray-200 {
+    background-color: #EDF2F7;
+}
+
+.bg-gray-700 {
+    background-color: #4a5568;
+}
+
+.font-bold {
+    font-weight: bold;
+}

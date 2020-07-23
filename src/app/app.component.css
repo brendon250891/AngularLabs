@@ -1,0 +1,14 @@
+.list-nav {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.flex {
+    display:flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
