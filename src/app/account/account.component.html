@@ -2,35 +2,44 @@
     <!-- Avatar, name -->
     <div class="flex items-center justify-between bg-gray-700 p-4 rounded-top text-white">
         <div class="flex items-center">
-            <img class="w-24 h-24 rounded-full object-cover" src="../../assets/images/{{ account.getAvatar() }}">
-            <h2 class="px-4 font-bold">{{ account.getFullName() }}</h2>
+            <img class="w-24 h-24 rounded-full object-cover" src="../../assets/images/{{ user.avatar }}">
+            <h2 class="px-4">{{ user.username }}</h2>        
         </div>
         <!-- social media -->
         <div>
-            <a href="#" class="w-8 h-8 rounded-full object-cover px-2">
-                <img src="../../assets/images/fbs.png">
+            <a href="#" class="px-2">
+                <img class="w-10 h-10 object-cover rounded-full border-white" src="../../assets/images/fb.png">
             </a>
-            <a href="#" class="w-8 h-8 rounded-full object-cover px-2">
-                <img src="../../assets/images/twitters.png">
+            <a href="#" class="px-2">
+                <img class="w-10 h-10 object-cover rounded-full border-white" src="../../assets/images/twitter.png">
             </a>
-            <a href="#" class="w-8 h-8 rounded-full object-cover px-2">
-                <img src="../../assets/images/instagrams.jpg">
+            <a href="#" class="px-2">
+                <img class="w-10 h-10 object-cover rounded-full border-white" src="../../assets/images/instagram.jpg">
             </a>
         </div>
     </div>    
     <!-- Bio -->
     <div class="p-4 bg-gray-200">
-        <div class="pt-12">
-            <h4 class="font-bold">Bio</h4>
+        <div class="py-2">
+            <div class="flex justify-between">
+                <h4 class="font-bold py-2">Bio</h4>
+                <a routerLink="/profile" class="w-4 h-4">
+                    <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="#4A5568">
+                        <path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
             <div class="flex justify-between items-center">
                 <div class="flex flex-col">
                     <p>Occupation: Software Engineer</p>
                     <p>Company: RandomSoft</p>
-                    <p>Position: Senior Software Enginner</p>
+                    <p>Location: Random, RN</p>
                 </div>
                 <div class="flex flex-col">
-                    <p>Location: Random, RN</p>
-                    <p>Country: Random</p>
+                    <p>Date of Birth: {{ user.birthdate }}</p>
+                    <p>Age: {{ user.age }}</p>
+                    <p>Email: {{ user.email }}</p>
                 </div>
             </div>
         </div>

@@ -1,0 +1,67 @@
+<div class="flex flex-col items-center w-2/3 mx-auto mt-12">
+    <!-- Header -->
+    <div class="bg-gray-700 text-white p-4 mx-auto w-full rounded-top flex justify-between items-center">
+        <div class="flex items-center">
+            <img class="w-24 h-24 rounded-full object-cover" src="../../assets/images/{{ user.avatar }}">
+            <h4 class="px-4">{{ user.username }}</h4>
+        </div>
+        <div>
+            <a href="#" class="px-2">
+                <img class="w-10 h-10 object-cover rounded-full border-white" src="../../assets/images/fb.png">
+            </a>
+            <a href="#" class="px-2">
+                <img class="w-10 h-10 object-cover rounded-full border-white" src="../../assets/images/twitter.png">
+            </a>
+            <a href="#" class="px-2">
+                <img class="w-10 h-10 object-cover rounded-full border-white" src="../../assets/images/instagram.jpg">
+            </a>
+        </div>
+    </div>
+
+    <!-- Body / Form -->
+    <div class="bg-gray-200 w-full">
+        
+        <div class="mt-4 flex flex-col items-center mb-12">
+            
+            <h2>Edit Profile</h2>
+            
+            <form class="mt-4 self-start w-full flex flex-col">
+
+                <h4 class="px-4 py-2">Bio</h4>
+                <div class="flex items-center justify-between w-full">
+                    <div class="flex flex-col">
+
+                        <div class="flex items-center justify-between">
+                            <label class="px-4">Username</label>
+                            <input type="text" [(ngModel)]="user.username" name="username">
+                        </div>
+
+                        <div class="flex items-center py-2 justify-between">
+                            <label class="px-4">Email</label>
+                            <input type="text" [(ngModel)]="user.email" name="email">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col px-4">
+
+                        <div class="flex items-center justify-between">
+                            <label class="px-4">Date of Birth</label>
+                            <input type="text" [(ngModel)]="user.birthdate" name="birthdate">
+                        </div>
+
+                        <div class="flex items-center py-2 justify-between">
+                            <label class="px-4">Age</label>
+                            <input type="text" [(ngModel)]="user.age" name="age">
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 self-end px-4">
+                    <button class="mr-4 px-4 py-2 bg-blue-500 rounded text-white" (click)="cancel()">Cancel</button> 
+                    <input class="px-4 py-2 bg-green-500 rounded text-white" type="submit" value="Save" (click)="save()">
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>

@@ -6,7 +6,10 @@
             </div>
             <div class="flex">
                 <a class="nav-link" routerLink="/account">Account</a>
-                <a class="nav-link" routerLink="/login">Login</a>
+                <div class="logout" *ngIf="isLoggedIn">
+                    <a class="nav-link" (click)="logout()">Logout</a>
+                </div>
+                <a *ngIf="!isLoggedIn" class="nav-link" routerLink="/login">Login</a>                    
             </div>
         </div>
     </div>
